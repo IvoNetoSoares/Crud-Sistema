@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Apagar Aluno</title>
+</head>
+<body>
+    <h2>Apagar Aluno</h2>
+    <form action="../PHP/apagarBD.php" method="post">
+        <label for="aluno">Selecione o Aluno:</label>
+        <select id="aluno" name="aluno" required>
+            <option value="">Selecione um aluno</option>
+            <?php
+            $db = new SQLite3('database.db');
+            $result = $db->query("SELECT id, nome FROM alunos");
+            while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+                echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+            }
+            ?>
+        </select>
+        <button type="submit">Apagar</button>
+    </form>
+</body>
+</html>

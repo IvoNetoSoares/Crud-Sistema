@@ -1,0 +1,48 @@
+SELECT * FROM user ;
+
+
+
+Comandos no shell da máquina Linux para criar o BD e tabela
+
+Instalar e rodar o sqlite3: digital sqlite3 no prompt
+( se preciso instalar es colher a opção SQLITE3 )
+aberto o CMD do sqlite: criar o BD
+.open Alunos
+Para listar os BD´s
+.database
+Criar a tabela (exemplo)
+
+CREATE TABLE  aluno (
+  RA varchar(12) PRIMARY KEY,
+    nome varchar(30),
+  endereco varcxhar(40), 
+)
+Listar tabelas
+.table
+Agora comandos via sistema PHP
+
+****************************************
+Comandos Sqlite
+
+#criando tabela
+ CREATE TABLE user (nome txt);
+
+ verificando as tabelas
+ .table
+
+ verificando os bancos de dados
+ .databases
+
+ ligando o nome das colunas ( headers)
+ .headers on
+
+ inserindo dados nas tabelas
+ INSERT INTO user VALUES('maria');
+
+ lendo os dados da tabela
+  SELECT * FROM user;
+
+
+
+head nome_do_arquivo.extensao    para ver as primeiras dez linhas
+ daSE

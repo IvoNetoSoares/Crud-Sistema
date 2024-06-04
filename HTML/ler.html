@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ler Banco de Dados</title>
+</head>
+<body>
+    <h1>Ler Banco de Dados</h1>
+    <form action="lerBD.php" method="POST">
+        <button type="submit">Ler Dados</button>
+    </form>
+
+    <div id="result">
+        <?php
+        if (isset($_GET['result'])) {
+            echo $_GET['result'];
+        }
+        ?>
+    </div>
+</body>
+</html>
